@@ -1,0 +1,54 @@
+﻿/**
+  * OpenSim Script Glove Control (P5 Glove)
+  * @author: Julio Adrián Hernández Méndez
+  * @since: January 15 '14
+  * Last update: March 07 '14
+  * @version 2.0
+  *
+  * Script hecho en GlovePIE que permite la manipulación de objetos con ayuda del
+  * Control P5 Glove.
+  *
+*/
+// Debug Area
+//debug = Smooth(MapRange(Glove1.AbsoluteY*0.07, 10 inches,-10 inches, 0,1)) + " - RelativeY =" +Glove1.RelativeY
+debug = glove1.roll
+
+//Script
+Glove1.MouseMode = true
+/**
+  * Mientras que la mano no se haga puño no entrará aquí
+  * No se tomó en cuenta el dedo pulgar porque hace función de click derecho
+  */
+if(Glove1.Index > 30 and Glove1.Middle > 30 and Glove1.Ring > 25 and Glove1.Pinky > 25) then
+    Glove1.MouseMode = false
+
+    if(Glove1.roll < 180 ) then
+        release(Keys.Shift)
+        release(Keys.Ctrl)
+        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
+        Mouse.Y = 0.5
+        /**
+          *Esta linea siguiente debería hacer posible el movimiento en Z de Opensim
+          *Sin embargo es muy inestable, por lo que opté en dejarlo fijo.
+          *
+          *Mouse.Y = Smooth(Smooth(MapRange(Glove1.absoluteZ*.1, -40 ,-500, 0,1))) *.2  + .45
+        */
+        if(Glove1.RelativeY > 200 or Glove1.RelativeY < -200) then
+            press(Keys.Ctrl)
+            release(Keys.Shift)
+            Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
+            Mouse.y = Smooth(MapRange(Glove1.AbsoluteY*0.07, 10 inches,-10 inches, 0,1))
+        endif
+    else
+        /**
+          *Si la mano gira a la derecha en 180° entrará aquí,
+          *que es para poder girar los objetos.
+          *Mueva la mano a la derecha o a la izquierda para lograrlo
+          *mientras su mano permanece a más de 180°
+        */
+        press(Keys.Shift)
+        press(Keys.Ctrl)
+        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
+        Mouse.y = .5
+    endif
+endif  //Fin modo tomar objetos
