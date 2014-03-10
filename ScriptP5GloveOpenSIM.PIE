@@ -15,8 +15,19 @@
 //debug = " - RelativeY =" +Glove1.RelativeY
 //debug = glove1.roll
 
-// Script
-// Antes de entrar a tomar el objeto el guante funciona como Mouse
+/*** Declaracion de variables ***/
+var.precisionX = 0.07
+var.precisionY = 0.07
+var.mitadPantalla = 0.5
+var.minimoIndice = 30
+var.minimoMedio = 30
+var.minimoAnular = 25
+var.minimoMenique = 25
+
+/*** Script ***/
+/**
+  * Antes de entrar a tomar el objeto el guante funciona como Mouse
+  */
 Glove1.MouseMode = true
 release(Keys.Shift)
 release(Keys.Ctrl)
@@ -24,36 +35,36 @@ release(Keys.Ctrl)
   * Mientras que la mano no se haga puño no entrará aquí
   * No se tomó en cuenta el dedo pulgar porque hace función de click derecho
   */
-if(Glove1.Index > 30 and Glove1.Middle > 30 and Glove1.Ring > 25 and Glove1.Pinky > 25) then
+if(Glove1.Index > var.minimoIndice and Glove1.Middle > var.minimoMedio and Glove1.Ring > var.minimoAnular and Glove1.Pinky > var.minimoMenique) then
     Glove1.MouseMode = false
 
     if(Glove1.roll < 180 ) then
         release(Keys.Shift)
         release(Keys.Ctrl)
-        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
-        Mouse.Y = 0.5
+        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*var.precisionX, -10 inches,10 inches, 0,1))
+        Mouse.Y = var.mitadPantalla
         /**
-          *Esta linea siguiente debería hacer posible el movimiento en Z
-          *Sin embargo es muy inestable, por lo que opté en dejarlo fijo.
+          * Esta linea siguiente debería hacer posible el movimiento en Z
+          * Sin embargo es muy inestable, por lo que opté en dejarlo fijo.
           *
-          *Mouse.Y = Smooth(Smooth(MapRange(Glove1.absoluteZ*.1, -40 ,-500, 0,1))) *.2  + .45
+          * Mouse.Y = Smooth(Smooth(MapRange(Glove1.absoluteZ*.1, -40 ,-500, 0,1))) *.2  + .45
         */
         if(Glove1.RelativeY > 200 or Glove1.RelativeY < -200) then
             press(Keys.Ctrl)
             release(Keys.Shift)
-            Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
-            Mouse.y = Smooth(MapRange(Glove1.AbsoluteY*0.07, 10 inches,-10 inches, 0,1))
+            Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*var.precisionX, -10 inches,10 inches, 0,1))
+            Mouse.y = Smooth(MapRange(Glove1.AbsoluteY*var.precisionY, 10 inches,-10 inches, 0,1))
         endif
     else
         /**
-          *Si la mano gira a la derecha en 180° entrará aquí,
-          *que es para poder girar los objetos.
-          *Mueva la mano a la derecha o a la izquierda,
-          *mientras su mano permanece a más de 180°, para lograrlo
+          * Si la mano gira a la derecha en 180° entrará aquí,
+          * que es para poder girar los objetos.
+          * Mueva la mano a la derecha o a la izquierda,
+          * mientras su mano permanece a más de 180°, para lograrlo
         */
         press(Keys.Shift)
         press(Keys.Ctrl)
-        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*0.07, -10 inches,10 inches, 0,1))
-        Mouse.y = Smooth(MapRange(Glove1.AbsoluteY*0.07, 10 inches,-10 inches, 0,1))
+        Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*var.precisionX, -10 inches,10 inches, 0,1))
+        Mouse.y = Smooth(MapRange(Glove1.AbsoluteY*var.precisionY, 10 inches,-10 inches, 0,1))
     endif
 endif  //Fin modo tomar objetos
