@@ -2,8 +2,8 @@
   * OpenSim Script Glove Control (P5 Glove)
   * @author: Julio Adrián Hernández Méndez
   * @since: January 15 '14
-  * Last update: March 07 '14
-  * @version 2.0
+  * Last update: March 12 '14
+  * @version 2.1
   *
   * Script hecho en GlovePIE que permite la manipulación de objetos
   * con ayuda del control P5 Glove.
@@ -16,13 +16,14 @@
 //debug = glove1.roll
 
 /*** Declaracion de variables ***/
-var.precisionX = 0.07
-var.precisionY = 0.07
+var.precisionX = 0.07        //Entre menor sea el numero, mayor precisión
+var.precisionY = 0.07        //Entre menor sea el numero, mayor precisión
 var.mitadPantalla = 0.5
 var.minimoIndice = 30
 var.minimoMedio = 30
 var.minimoAnular = 25
 var.minimoMenique = 25
+var.gradosModoGiro = 150
 
 /*** Script ***/
 /**
@@ -38,7 +39,7 @@ release(Keys.Ctrl)
 if(Glove1.Index > var.minimoIndice and Glove1.Middle > var.minimoMedio and Glove1.Ring > var.minimoAnular and Glove1.Pinky > var.minimoMenique) then
     Glove1.MouseMode = false
 
-    if(Glove1.roll < 180 ) then
+    if(Glove1.roll < var.gradosModoGiro ) then
         release(Keys.Shift)
         release(Keys.Ctrl)
         Mouse.x = Smooth(MapRange(Glove1.AbsoluteX*var.precisionX, -10 inches,10 inches, 0,1))
@@ -57,10 +58,10 @@ if(Glove1.Index > var.minimoIndice and Glove1.Middle > var.minimoMedio and Glove
         endif
     else
         /**
-          * Si la mano gira a la derecha en 180° entrará aquí,
+          * Si la mano gira a la derecha en 150° entrará aquí,
           * que es para poder girar los objetos.
           * Mueva la mano a la derecha o a la izquierda,
-          * mientras su mano permanece a más de 180°, para lograrlo
+          * mientras su mano permanece a más de 150°, para lograrlo
         */
         press(Keys.Shift)
         press(Keys.Ctrl)
