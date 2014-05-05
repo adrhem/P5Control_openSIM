@@ -1,0 +1,122 @@
+LIBRARY   P5DLL
+DESCRIPTION "P5 Absolute Mode Driver"
+EXPORTS
+	??0CP5DLL@@QAE@XZ @1
+	P5_Close @22
+	P5_Init @23
+	P5_SetClickSensitivity @24
+	P5_GetClickSensitivity @25
+	P5_SaveBendSensors @26
+	P5_CalibrateBendSensors @27
+	P5_CalibratePositionData @28
+	P5_GetMouseState @29
+	P5_SetMouseState @30
+	P5_SetMouseStickTime @31
+	P5_GetMouseStickTime @32
+	P5_GetMouseButtonAllocation @33
+	P5_SetMouseButtonAllocation @34
+	P5_GetLastError @35
+    P5_GetCount @36
+    P5_GetDataPointer @37
+    P5_GetStatePointer @38
+    P5_GetInfoPointer @39
+    P5_GetCP5DLL @40
+    P5_GetCP5 @41
+    P5_GetPrivatePointer @42
+	Java_com_essentialreality_CP5DLL_00024P5State_update @43
+	Java_com_essentialreality_CP5DLL_P5_1Close @44
+	Java_com_essentialreality_CP5DLL_P5_1Doit @45
+	Java_com_essentialreality_CP5DLL_P5_1SetClickSensitivity @46
+	Java_com_essentialreality_CP5DLL_P5_1GetClickSensitivity @47
+	Java_com_essentialreality_CP5DLL_P5_1SaveBendSensors @48
+	Java_com_essentialreality_CP5DLL_P5_1CalibrateBendSensors @49
+	Java_com_essentialreality_CP5DLL_P5_1CalibratePositionData @50
+	Java_com_essentialreality_CP5DLL_P5_1GetMouseState @51
+	Java_com_essentialreality_CP5DLL_P5_1SetMouseState @52
+	Java_com_essentialreality_CP5DLL_P5_1SetMouseStickTime @53
+	Java_com_essentialreality_CP5DLL_P5_1GetMouseStickTime @54
+	Java_com_essentialreality_CP5DLL_P5_1GetMouseButtonAllocation @55
+	Java_com_essentialreality_CP5DLL_P5_1SetMouseButtonAllocation @56
+	Java_com_essentialreality_CP5DLL_P5_1GetLastError @57
+
+    Java_com_essentialreality_CP5DLL_00024P5Data_update @58
+    Java_com_essentialreality_CP5DLL_00024P5Data_updateFull @59
+	Java_com_essentialreality_CP5DLL_00024P5Info_update @60
+
+	P5_GetACAdaptorStatus @61
+
+	P5_GetBendCalibration @62
+	P5_GetRawFingerBends @63
+
+	P5_GetCalibrationData @64
+
+	P5_SetUnits @65
+	P5_SetForwardZ @66
+
+	P5_SetTowerPos @67
+	P5_SetTowerRotMat @68
+	P5_TiltTowerForward @69
+	P5_SpinTowerRight @70
+	P5_TiltTowerRight @71
+	P5_SetSensitivity @72
+
+	P5_SetLedPos @73
+	P5_SetGlovePos @74
+	P5_SetGloveRotMat @75
+	P5_PitchGlove @76
+	P5_YawGlove @77
+	P5_RollGlove @78
+
+
+	P5_SetInterfaceMode @79
+	P5_SetFilterMode @80
+	P5_SetFilterAmount @81
+	P5_ClearArchive @82
+	P5_SetRequiredAccuracy @83
+	P5_SetPrediction @84
+
+	P5_RestoreMouse @85
+	P5_UnRestoreMouse @86
+
+
+	P5_SetFeature @87
+	P5_SetFeatureReport @88
+	P5_GetFeature @89
+	P5_GetFeatureReport @90
+
+	P5_GetData @91
+	P5_GetState @92
+	P5_GetInfo @93
+
+	P5_GetAbsolutePos @94
+	P5_GetRelativePos @95
+	P5_GetRelativeAvgPos @96
+	P5_GetRotation @97
+	P5_GetFingerBends @98
+	P5_GetButtons @99
+	P5_GetThreadStatus @100
+
+	Java_com_essentialreality_CP5DLL_P5_1GetACAdaptorStatus @101
+	Java_com_essentialreality_CP5DLL_P5_1SetUnits @102
+	Java_com_essentialreality_CP5DLL_P5_1SetForwardZ @103
+	Java_com_essentialreality_CP5DLL_P5_1SetTowerPos @104
+	Java_com_essentialreality_CP5DLL_P5_1TiltTowerForward @105
+	Java_com_essentialreality_CP5DLL_P5_1SpinTowerRight @106
+	Java_com_essentialreality_CP5DLL_P5_1TiltTowerRight @107
+	Java_com_essentialreality_CP5DLL_P5_1SetSensitivity @108
+	Java_com_essentialreality_CP5DLL_P5_1SetLedPos @109
+	Java_com_essentialreality_CP5DLL_P5_1SetGlovePos @110
+	Java_com_essentialreality_CP5DLL_P5_1PitchGlove @111
+	Java_com_essentialreality_CP5DLL_P5_1YawGlove @112
+	Java_com_essentialreality_CP5DLL_P5_1RollGlove @113
+	Java_com_essentialreality_CP5DLL_P5_1SetInterfaceMode @114
+	Java_com_essentialreality_CP5DLL_P5_1SetFilterMode @115
+	Java_com_essentialreality_CP5DLL_P5_1SetFilterAmount @116
+	Java_com_essentialreality_CP5DLL_P5_1ClearArchive @117
+	Java_com_essentialreality_CP5DLL_P5_1SetRequiredAccuracy @118
+	Java_com_essentialreality_CP5DLL_P5_1SetPrediction @119
+	Java_com_essentialreality_CP5DLL_P5_1RestoreMouse @120
+	Java_com_essentialreality_CP5DLL_P5_1UnRestoreMouse @121
+
+    P5_SetTrackerUnwarp @122
+	P5_GetTrackerUnwarp @123

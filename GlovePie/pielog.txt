@@ -1,0 +1,71 @@
+(0, 05-may-2014 11:21:28) Initializing PieLog
+(0, 05-may-2014 11:21:28) Initializing filemode variable
+(0, 05-may-2014 11:21:28) Initializing PieSpeech
+(0, 05-may-2014 11:21:28) Initializing PieVariables
+(0, 05-may-2014 11:21:28) Initializing PieCursorUnit
+(0, 05-may-2014 11:21:28) Initializing PieMouse
+(0, 05-may-2014 11:21:28) Initializing PieKeyboard
+(0, 05-may-2014 11:21:28) Initializing PieInput
+(0, 05-may-2014 11:21:28) Initializing PieOSC
+(0, 05-may-2014 11:21:28) Initializing PiePie
+(0, 05-may-2014 11:21:28) Initializing PieFunction
+(0, 05-may-2014 11:21:28) Initializing PieStatement
+(0, 05-may-2014 11:21:28) Initializing PieExpression
+(0, 05-may-2014 11:21:28) Initializing PieJoystick
+(0, 05-may-2014 11:21:28) Initializing PieP5
+(0, 05-may-2014 11:21:28) Initializing PieMidi
+(0, 05-may-2014 11:21:28) Initializing PiePPJoy
+(0, 05-may-2014 11:21:28) Initializing PieRemote
+(0, 05-may-2014 11:21:28) Initializing Pie Speech Recognition
+(0, 05-may-2014 11:21:28) Initializing PieScreen
+(0, 05-may-2014 11:21:28) GetMonitorEDID
+(0, 05-may-2014 11:21:28) Initializing PieWIndow
+(0, 05-may-2014 11:21:28) Initializing PieCursors
+(0, 05-may-2014 11:21:28) Initializing PieZ800
+(0, 05-may-2014 11:21:28) Initializing PieIntersense
+(0, 05-may-2014 11:21:28) Initializing PieFastrak
+(0, 05-may-2014 11:21:28) Initializing PiePPT
+(0, 05-may-2014 11:21:28) Initializing PieTrackIR
+(0, 05-may-2014 11:21:28) Initializing PiePinch
+(0, 05-may-2014 11:21:28) Initializing PieBird
+(0, 05-may-2014 11:21:28) Initializing PieFiveDT
+(0, 05-may-2014 11:21:28) Starting main
+(0, 05-may-2014 11:21:28) Application object initialized
+(0, 05-may-2014 11:21:28) Creating main window
+(0, 05-may-2014 11:21:28) EditorForm.Create
+(0, 05-may-2014 11:21:28) Checking command line parameters:
+(0, 05-may-2014 11:21:28) Creating debug window
+(0, 05-may-2014 11:21:28) Assigning exception handler
+(0, 05-may-2014 11:21:28) Creating debug remote control window
+(0, 05-may-2014 11:21:28) Running application
+(0, 05-may-2014 11:21:30) FormCloseQuery
+(0, 05-may-2014 11:21:30) Compile>Stop
+(0, 05-may-2014 11:21:30) Application finished
+(0, 05-may-2014 11:21:30) Destroying EditorForm
+(0, 05-may-2014 11:21:30) Finalizing PieFiveDT
+(0, 05-may-2014 11:21:30) Finalizing PieBird
+(0, 05-may-2014 11:21:30) Finalizing PiePinch
+(0, 05-may-2014 11:21:30) Finalizing PieTrackIR
+(0, 05-may-2014 11:21:30) Finalizing PiePPT
+(0, 05-may-2014 11:21:30) Finalizing PieFastrak
+(0, 05-may-2014 11:21:30) Finalizing PieIntersense
+(0, 05-may-2014 11:21:30) Finalizing PieZ800
+(0, 05-may-2014 11:21:30) Finalizing PieCursors
+(0, 05-may-2014 11:21:30) Finalizing PieWindow
+(0, 05-may-2014 11:21:30) Finalizing PieScreen
+(0, 05-may-2014 11:21:30) Finalizing Pie Speech Recognition
+(0, 05-may-2014 11:21:30) Finalizing PieRemote
+(0, 05-may-2014 11:21:30) Finalizing PiePPJoy
+(0, 05-may-2014 11:21:30) Finalizing PieMidi
+(0, 05-may-2014 11:21:30) Finalizing PieP5
+(0, 05-may-2014 11:21:30) Finalizing PieJoystick
+(0, 05-may-2014 11:21:30) Finalizing PieStatement
+(0, 05-may-2014 11:21:30) Finalizing PieFunction
+(0, 05-may-2014 11:21:30) Finalizing PiePie
+(0, 05-may-2014 11:21:30) Finalizing PieOSC
+(0, 05-may-2014 11:21:30) Finalizing PieKeyboard
+(0, 05-may-2014 11:21:30) Finalizing PieMouse
+(0, 05-may-2014 11:21:30) Finalizing PieVariables
+(0, 05-may-2014 11:21:30) Finalizing PieSpeech
+(0, 05-may-2014 11:21:30) Finalizing PieLog
+(0, 05-may-2014 11:21:30) Closing log file
